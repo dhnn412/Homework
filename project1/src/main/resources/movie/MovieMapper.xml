@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="movie.MovieMapper">
+
+    <resultMap id="movieResultMap" type="movie.MovieDTO">
+        <id property="code" column="CODE"/>
+        <result property="title" column="TITLE"/>
+        <result property="director" column="DIRECTOR"/>
+        <result property="rating" column="RATING"/>
+    </resultMap>
+
+    <select id="selectAllMovie" resultMap="movieResultMap">
+        SELECT
+               CODE
+             , TITLE
+             , DIRECTOR
+             , RATING
+          FROM TB_MOVIE
+         ORDER BY CODE
+    </select>
+
+    <select id="selectMovieByRating" parameterType="_int" resultMap="movieResultMap">
+        SELECT
+               CODE
+             , TITLE
+             , DIRECTOR
+             , RATING
+          FROM TB_MOVIE
+         WHERE RATING = #{rating}
+    </select>
+
+    <insert id="insertMovie" parameterType="movie.MovieDTO">
+        INSERT
+          INTO TB_MOVIE
+        (
+          CODE
+        , TITLE
+        , DIRECTOR
+        , RATING
+        )
+        VALUES
+        (
+          SEQ_CODE.NEXTVAL
+        , #{title}
+        , #{director}
+        , #{rating}
+        )
+    </insert>
+
+    <update id="updateMovie" parameterType="movie.MovieDTO">
+        UPDATE
+               TB_MOVIE
+           SET TITLE = #{title}
+             , DIRECTOR = #{director}
+             , RATING = #{rating}
+         WHERE CODE = #{code}
+    </update>
+
+    <delete id="deleteMovie" parameterType="_int">
+        DELETE
+          FROM TB_MOVIE
+         WHERE CODE = #{code}
+    </delete>
+
+</mapper>
