@@ -1,0 +1,124 @@
+@charset "UTF-8";   /* 인코딩 문자 깨짐 방지 */
+
+html {
+    /* 사용자가 설정한 문자 크기 그대로 반영 될 수 있도록 */
+    font-size : 100%;
+}
+
+body {color: black;}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+#header{
+    display: flex;
+    width: 1000px;
+    height: 70px;
+    margin: 0 auto;
+    border-bottom: 1px black solid;
+    justify-content: space-between;
+
+}
+
+#logo{
+    margin-top: 16px;
+}
+
+#nav{
+    display: flex;
+    list-style-type: none;
+}
+
+#nav li{
+    margin-left: 36px;
+}
+#nav li :hover{color: lightgray; transition: all 0.3s;}
+/*=============================================================*/
+#home_content{
+    width: 1000px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px black solid;
+}
+
+#home_pic{
+    height: 500px;
+    background: lightgrey;
+}
+#home_text{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+/*=============================================================*/
+
+#about_text{
+    width: 700px;
+    height: 200px;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+#about_mbti{
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: brown;
+}
+
+#mbti_nav{
+    display: flex;
+    list-style-type: none;
+}
+
+#mbti_nav li{
+    margin-left: 36px;
+}
+
+footer{
+    text-align: center;
+    margin-top: 100px;
+}
+
+/*==============skills======================*/
+#skills_text{
+    width: 700px;
+    height: 100px;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+#grid {
+    display: grid;
+    width: 900px;
+    height: 900px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    border: black 1px solid;
+}
+.item>img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.item>img:hover{
+    
+}
+
+.item h3{
+    opacity: 0;
+}
+.item h3:hover{
+    opacity: 1;
+}
+
+
+
