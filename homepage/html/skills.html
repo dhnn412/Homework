@@ -21,7 +21,7 @@
                     <li><a href="mainpage.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="skills.html">Skills</a></li>
-                    <li><a href="">More</a></li>
+                    <li><a href="project.html">Project</a></li>
                 </ul>
             </nav>
         </header>
@@ -29,39 +29,43 @@
             <h3>Skills</h3>
         </div>
         <div id="grid">
-            <div class="item2">
-                <img src="../css/java.png">
-                <div class="text"><p>java</p></div>
+            <div class="item3" onclick="window.open('https://www.notion.so/01_java-0e9e9e2cccb54499aae86b2f550b147d');">
+                <img src="../css/java.png">      
             </div>
-            <div class="item2">
-                <img src="../css/oracle.jpg">
-                <div class="text"><p>java</p></div>
+            <div class="item3" onclick="window.open('https://www.notion.so/02_oracle-f97bace78f5b45dd8179225aec18c084');">
+                <img src="../css/oracle.jpg">       
             </div>
-            <div class="item2">
+            <div class="item3" onclick="window.open('https://www.notion.so/06_HTML-d65ad2201e114667b092b7fc57ec46af');">
                 <img src="../css/html.png">
-                <div class="text"><p>java</p></div>
             </div>
-            <div class="item2 big-box">
+            <div class="item3" onclick="window.open('https://www.notion.so/07_CSS-b7c8dcb8c83d4e2a87fc8c602a3b2e3e');">
                 <img src="../css/css.jpg">
-                <div class="text"><p>java</p></div>
             </div>
-            <div class="item2">
+            <div class="item3" onclick="window.open('https://www.notion.so/08_javascript-15cd930f9a784150babd6f8765983768');">
                 <img src="../css/js.jpg">
-                <div class="text"><p>java</p></div>
             </div>
-            <div class="item2">
+            <div class="item2 item3" id="item4">
                 <img src="../css/servlets.png">
-                <div class="text"><p>java</p></div>
             </div>
-            <div class="item2">
+            <div class="item2 item3" id="item4">
                 <img src="../css/react.jpg">
-                <div class="text"><p>java</p></div>
             </div>
-            <div class="item2">
+            <div class="item2 item3" id="item4">
                 <img src="../css/spring.png">
-                <div class="text"><p>java</p></div>
+                
             </div>
         </div>
+
+        <script>
+            window.onload = function () {
+        var el = document.getElementById("item4");
+         el.onclick = hello;
+                }
+
+        function hello(){
+            alert('준비중입니다.');
+                }
+        </script>
 </body>
 
 </html>
